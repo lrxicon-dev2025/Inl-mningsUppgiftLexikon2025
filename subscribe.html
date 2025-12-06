@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Prenumerera</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header>
+    <h1 style="text-align:center;">Prenumerera !</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Hem</a></li>
+      <li><a href="jobs.html">Nya Jobb</a></li>
+      <li><a href="tools.html">Utbildninng</a></li>
+      <li><a href="roligt.html">Roligt</a></li>
+      <li><a href="subscribe.html">Prenumerera</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="sub-container">
+      <div class="emoji">📩</div>
+      <h2>Få vårat månadsbrev!</h2>
+
+      <form class="sub-form" onsubmit="return doSub(event)">
+        <input type="text" id="theName" required placeholder="Your Name" />
+        <input type="email" id="theEmail" required placeholder="your@email.com" />
+        <textarea id="theAddress" required placeholder="Address (for swag, not spam)"></textarea>
+        <button type="submit">Prenumerera</button>
+      </form>
+      <div class="fineprint">
+        <span style="font-size:1.15em;"></span>
+        No spam.
+      </div>
+      <div id="sub-success" class="sub-success">
+        <b>Success!</b> <br>Välkommen, <span id="nameResult">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>DevHub 2025</p>
+  </footer>
+  <script>
+    function doSub(e) {
+      e.preventDefault();
+      var name = document.getElementById("theName").value.trim();
+      document.getElementById("sub-success").style.display = "block";
+      document.getElementById("nameResult").textContent = name || 'subber';
+      // Clear form (no backend, demo only)
+      document.getElementById("theName").value = "";
+      document.getElementById("theEmail").value = "";
+      document.getElementById("theAddress").value = "";
+      return false;
+    }
+  </script>
+</body>
+
+</html>
