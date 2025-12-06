@@ -16,47 +16,33 @@
     <ul>
       <li><a href="index.html">Hem</a></li>
       <li><a href="jobs.html">Nya Jobb</a></li>
-      <li><a href="tools.html">Utbildninng</a></li>
+      <li><a href="utbildning.html">Utbildning</a></li>
       <li><a href="roligt.html">Roligt</a></li>
       <li><a href="subscribe.html">Prenumerera</a></li>
     </ul>
   </nav>
   <main>
-    <section class="sub-container">
-      <div class="emoji">📩</div>
-      <h2>Få vårat månadsbrev!</h2>
+    <h2>Anmäl dig till vårat nyhetsbrev !</h2>
+    <form onsubmit="doSubscribe(event)">
+      <input type="text" id="subName" placeholder="Ditt namn" required />
+      <input type="email" id="subEmail" placeholder="din@email.se" required />
+      <textarea id="subMessage" placeholder="Vad vill du bli bättre på?"></textarea>
+      <button type="submit" class="btn">Skicka</button>
+    </form>
+    <div id="sub-success" style="display:none; margin-top:1rem; padding:1rem; background:#e8f5e9; border-radius:8px; color:#2e7d32;">
+      Tack för din anmälan, <span id="subResultName"></span>! Vi kontaktar dig snart.
+    </div>
 
-      <form class="sub-form" onsubmit="return doSub(event)">
-        <input type="text" id="theName" required placeholder="Your Name" />
-        <input type="email" id="theEmail" required placeholder="your@email.com" />
-        <textarea id="theAddress" required placeholder="Address (for swag, not spam)"></textarea>
-        <button type="submit">Prenumerera</button>
-      </form>
-      <div class="fineprint">
-        <span style="font-size:1.15em;"></span>
-        No spam.
-      </div>
-      <div id="sub-success" class="sub-success">
-        <b>Success!</b> <br>Välkommen, <span id="nameResult">
-      </div>
-    </section>
+    <h2>Hitta oss !</h2>
+    <iframe width="100%" height="400" style="border:0; border-radius:12px;"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.756455441354!2d18.063298!3d59.334592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9a5e6b74b3f5%3A0x1ed58a6787b8c0c3!2sStockholm!5e0!3m2!1ssv!2sse!4v1732234567890"
+      allowfullscreen="" loading="lazy">
+    </iframe>
   </main>
   <footer>
     <p>DevHub 2025</p>
   </footer>
-  <script>
-    function doSub(e) {
-      e.preventDefault();
-      var name = document.getElementById("theName").value.trim();
-      document.getElementById("sub-success").style.display = "block";
-      document.getElementById("nameResult").textContent = name || 'subber';
-      // Clear form (no backend, demo only)
-      document.getElementById("theName").value = "";
-      document.getElementById("theEmail").value = "";
-      document.getElementById("theAddress").value = "";
-      return false;
-    }
-  </script>
+
 </body>
 
 </html>
