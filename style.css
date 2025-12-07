@@ -59,8 +59,7 @@ main {
     text-align: center;
 }
 
-h1,
-h2 {
+h1, h2 {
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -171,6 +170,7 @@ th {
 }
 
 /* Formulär */
+
 form {
     max-width: 600px;
     margin: 2rem auto;
