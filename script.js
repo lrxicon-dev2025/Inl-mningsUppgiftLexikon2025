@@ -6,7 +6,7 @@ const quotes = [
     "Jag skulle förklara det... men jag har varken tid eller Crayon."
 ];
 
-// Use DOMContentLoaded instead of window.onload for bfcache compatibility
+// Use DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function () {
     const q = document.getElementById("random-quote");
     if (q) q.textContent = quotes[Math.floor(Math.random() * quotes.length)];
@@ -18,7 +18,7 @@ function doSubscribe(e) {
     var name = document.getElementById("subName").value.trim();
     document.getElementById("sub-success").style.display = "block";
     document.getElementById("subResultName").textContent = name || 'Subscriber';
-    // Clear form (no backend, demo only)
+    // Clear form 
     document.getElementById("subName").value = "";
     document.getElementById("subEmail").value = "";
     document.getElementById("subMessage").value = "";
