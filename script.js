@@ -6,10 +6,11 @@ const quotes = [
     "Jag skulle förklara det... men jag har varken tid eller Crayon."
 ];
 
-window.onload = function () {
+// Use DOMContentLoaded instead of window.onload for bfcache compatibility
+document.addEventListener('DOMContentLoaded', function () {
     const q = document.getElementById("random-quote");
     if (q) q.textContent = quotes[Math.floor(Math.random() * quotes.length)];
-};
+});
 
 // Prenumerationsformulär submission handler
 function doSubscribe(e) {

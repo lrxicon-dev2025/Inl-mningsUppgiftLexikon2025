@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+/* Image optimization: Use WebP format when available for better performance */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -70,7 +76,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    color: #0a84ff;
+    color: #0056b3;
 }
 
 .grid {
@@ -95,7 +101,7 @@ h2 {
 
 .btn {
     display: inline-block;
-    background: #0a84ff;
+    background: #0056b3;
     color: #fff;
     padding: 0.8rem 1.5rem;
     border-radius: 8px;
@@ -152,7 +158,7 @@ th {
 /* Roligt*/
 
 .number {
-    color: #1990e4;
+    color: #0056b3;
     font-size: 1.6rem;
     font-weight: bold;
     margin-right: 0.4em;
@@ -198,7 +204,7 @@ textarea {
 }
 
 .sub-container h2 {
-    color: #234479;
+    color: #0a3a5a;
     margin-bottom: 4px;
     font-size: 2em;
 }
@@ -210,7 +216,7 @@ textarea {
 
 .sub-lead {
     font-size: 1.12em;
-    color: #87671c;
+    color: #5a4a1a;
     margin-bottom: 22px;
 }
 
@@ -266,7 +272,7 @@ textarea {
 .fineprint {
     margin-top: 15px;
     font-size: 0.98em;
-    color: #7a6c28;
+    color: #5a4a1a;
 }
 
 .sub-success {

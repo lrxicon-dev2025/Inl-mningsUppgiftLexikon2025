@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DevHub - startsidan för utvecklare. Hitta jobb, utbildning och roliga innehål för programmerare.">
     <title>Startsida</title>
-<link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
   <header>
@@ -45,7 +47,7 @@
       </div>
 
       <div class="meme">
-        <img src="/meme/meme1.png" alt="Programmer meme" />
+        <img src="/meme/meme1.png" alt="Programmer meme" loading="lazy" />
       </div>
     </section>
   </main>
@@ -53,6 +55,6 @@
   <footer>
     <p>DevHub 2025</p>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
